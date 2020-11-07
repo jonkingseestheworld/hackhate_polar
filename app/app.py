@@ -62,7 +62,7 @@ def render_tab_content(active_tab, data):
         if active_tab == "imm":
             return html.Div(
                 [
-                    dbc.Row(dbc.Col(html.Div("Number of tweets across 12 months split by sentiment", 
+                    dbc.Row(dbc.Col(html.Div("Number of tweets over 12 months split by sentiment", 
                                              style={'color': 'black', 'fontSize': 20,'font-family':'Calibri', 'font-weight': 'bold'}))
                            ),
                     dbc.Row(
@@ -73,7 +73,7 @@ def render_tab_content(active_tab, data):
                             no_gutters=True,
                             ),
                     
-                    dbc.Row(dbc.Col(html.Div("Total number of reactions to tweets across 12 months", 
+                    dbc.Row(dbc.Col(html.Div("Total number of reactions to tweets over 12 months - split by sentiment", 
                                              style={'color': 'black', 'fontSize': 20,'font-family':'Calibri', 'font-weight': 'bold'}))
                            ),
                     dbc.Row(
@@ -83,7 +83,7 @@ def render_tab_content(active_tab, data):
                          ],
                             no_gutters=True,
                             ),
-                    dbc.Row(dbc.Col(html.Div("Number of reactions to tweets across 12 months split by sentiment", 
+                    dbc.Row(dbc.Col(html.Div("Total number of reactions to positive, negative and neutral tweets over 12 months - split by type", 
                                              style={'color': 'black', 'fontSize': 20,'font-family':'Calibri', 'font-weight': 'bold'}))
                            ),
                     dbc.Row(
@@ -113,7 +113,7 @@ def render_tab_content(active_tab, data):
         elif active_tab == "politics":
             return html.Div(
                 [
-                    dbc.Row(dbc.Col(html.Div("Number of tweets across 12 months split by sentiment", 
+                    dbc.Row(dbc.Col(html.Div("Number of tweets over 12 months split by sentiment", 
                                              style={'color': 'black', 'fontSize': 20,'font-family':'Calibri', 'font-weight': 'bold'}))
                            ),
                     dbc.Row(
@@ -124,7 +124,7 @@ def render_tab_content(active_tab, data):
                             no_gutters=True,
                             ),
                     
-                    dbc.Row(dbc.Col(html.Div("Total number of reactions to tweets across 12 months", 
+                    dbc.Row(dbc.Col(html.Div("Total number of reactions to tweets over 12 months - split by sentiment", 
                                              style={'color': 'black', 'fontSize': 20,'font-family':'Calibri', 'font-weight': 'bold'}))
                            ),
                     dbc.Row(
@@ -134,7 +134,7 @@ def render_tab_content(active_tab, data):
                          ],
                             no_gutters=True,
                             ),
-                    dbc.Row(dbc.Col(html.Div("Number of reactions to tweets across 12 months split by sentiment", 
+                    dbc.Row(dbc.Col(html.Div("Total number of reactions to positive, negative and neutral tweets over 12 months - split by type", 
                                              style={'color': 'black', 'fontSize': 20,'font-family':'Calibri', 'font-weight': 'bold'}))
                            ),
                     dbc.Row(
@@ -164,7 +164,7 @@ def render_tab_content(active_tab, data):
         elif active_tab == "lgbtq":
             return html.Div(
                 [
-                    dbc.Row(dbc.Col(html.Div("Number of tweets across 12 months split by sentiment", 
+                    dbc.Row(dbc.Col(html.Div("Number of tweets over 12 months split by sentiment", 
                                              style={'color': 'black', 'fontSize': 20,'font-family':'Calibri', 'font-weight': 'bold'}))
                            ),
                     dbc.Row(
@@ -175,7 +175,7 @@ def render_tab_content(active_tab, data):
                             no_gutters=True,
                             ),
                     
-                    dbc.Row(dbc.Col(html.Div("Total number of reactions to tweets across 12 months", 
+                    dbc.Row(dbc.Col(html.Div("Total number of reactions to tweets over 12 months - split by sentiment", 
                                              style={'color': 'black', 'fontSize': 20,'font-family':'Calibri', 'font-weight': 'bold'}))
                            ),
                     dbc.Row(
@@ -185,7 +185,7 @@ def render_tab_content(active_tab, data):
                          ],
                             no_gutters=True,
                             ),
-                    dbc.Row(dbc.Col(html.Div("Number of reactions to tweets across 12 months split by sentiment", 
+                    dbc.Row(dbc.Col(html.Div("Total number of reactions to positive, negative and neutral tweets over 12 months - split by type", 
                                              style={'color': 'black', 'fontSize': 20,'font-family':'Calibri', 'font-weight': 'bold'}))
                            ),
                     dbc.Row(
@@ -216,7 +216,7 @@ def render_tab_content(active_tab, data):
         elif active_tab == "environment":
              return html.Div(
                 [
-                    dbc.Row(dbc.Col(html.Div("Number of tweets across 12 months split by sentiment", 
+                    dbc.Row(dbc.Col(html.Div("Number of tweets over 12 months split by sentiment", 
                                              style={'color': 'black', 'fontSize': 20,'font-family':'Calibri', 'font-weight': 'bold'}))
                            ),
                     dbc.Row(
@@ -227,7 +227,7 @@ def render_tab_content(active_tab, data):
                             no_gutters=True,
                             ),
                     
-                    dbc.Row(dbc.Col(html.Div("Total number of reactions to tweets across 12 months", 
+                    dbc.Row(dbc.Col(html.Div("Total number of reactions to tweets over 12 months - split by sentiment", 
                                              style={'color': 'black', 'fontSize': 20,'font-family':'Calibri', 'font-weight': 'bold'}))
                            ),
                     dbc.Row(
@@ -237,7 +237,7 @@ def render_tab_content(active_tab, data):
                          ],
                             no_gutters=True,
                             ),
-                    dbc.Row(dbc.Col(html.Div("Number of reactions to tweets across 12 months split by sentiment", 
+                    dbc.Row(dbc.Col(html.Div("Total number of reactions to positive, negative and neutral tweets over 12 months - split by type", 
                                              style={'color': 'black', 'fontSize': 20,'font-family':'Calibri', 'font-weight': 'bold'}))
                            ),
                     dbc.Row(
@@ -296,13 +296,18 @@ def generate_graphs(n):
     
     ################################################################################################## 2015-2016
     #----------------------# Tweets split by sentiment: # positive, # negative and # neutral
+    
     imm_2015 = make_subplots(rows=2, cols=1, shared_xaxes=True, 
                 vertical_spacing=0.05, row_heights=[0.7,0.2])
-
-    imm_2015.add_trace(go.Scatter(x=imm_pp_pre.Date, y=imm_pp_pre.Negative, mode='lines',name = "Negative",stackgroup='one'), row=1,col=1)
-    imm_2015.add_trace(go.Scatter(x=imm_pp_pre.Date, y=imm_pp_pre.Positive, mode='lines',name = "Positive",stackgroup='one'), row=1,col=1)
-    imm_2015.add_trace(go.Scatter(x=imm_pp_pre.Date, y=imm_pp_pre.Neutral, mode='lines', name = "Neutral",stackgroup='one'), row=1, col=1)
-    imm_2015.add_trace(go.Scatter(x=imm_pp_pre.Date, y=imm_pp_pre.Percentage_neg, fill='tozeroy', name="% Negative"),  row=2, col=1)
+    
+    imm_2015.add_trace(go.Scatter(x=imm_pp_pre.Date, y=imm_pp_pre.Neutral, mode='lines',name = "Neutral",
+                                  stackgroup='one'), row=1,col=1) 
+    imm_2015.add_trace(go.Scatter(x=imm_pp_pre.Date, y=imm_pp_pre.Negative, mode='lines',name = "Negative",
+                                  stackgroup='one'),row=1,col=1)
+    imm_2015.add_trace(go.Scatter(x=imm_pp_pre.Date, y=imm_pp_pre.Positive, mode='lines',name = "Positive",
+                                  stackgroup='one'),row=1,col=1)    
+    imm_2015.add_trace(go.Scatter(x=imm_pp_pre.Date, y=imm_pp_pre.Percentage_neg, fill='tozeroy', 
+                                  name="% Negative",fillcolor='rgba(255,0,0,0.4)', line_color='red'),  row=2, col=1)
 
     imm_2015.update_layout(showlegend=True, 
            title=dict(
@@ -322,11 +327,14 @@ def generate_graphs(n):
     imm_2019 = make_subplots(rows=2, cols=1, shared_xaxes=True, 
                     vertical_spacing=0.05, row_heights=[0.7,0.2])
     
-    imm_2019.add_trace(go.Scatter(x=imm_pp_post.Date, y=imm_pp_post.Negative, mode='lines',name = "Negative",stackgroup='one'),row=1,col=1)
-    imm_2019.add_trace(go.Scatter(x=imm_pp_post.Date, y=imm_pp_post.Positive, mode='lines',name = "Positive",stackgroup='one'),row=1,col=1)
-    imm_2019.add_trace(go.Scatter(x=imm_pp_post.Date, y=imm_pp_post.Neutral, mode='lines', name = "Neutral",stackgroup='one'), row=1,col=1)
-    
-    imm_2019.add_trace(go.Scatter(x=imm_pp_post.Date, y=imm_pp_post.Percentage_neg, fill='tozeroy', name="% Negative"),  row=2, col=1)
+    imm_2019.add_trace(go.Scatter(x=imm_pp_post.Date, y=imm_pp_post.Neutral, mode='lines',name = "Neutral",
+                                  stackgroup='one'), row=1,col=1) 
+    imm_2019.add_trace(go.Scatter(x=imm_pp_post.Date, y=imm_pp_post.Negative, mode='lines',name = "Negative",
+                                  stackgroup='one'),row=1,col=1)
+    imm_2019.add_trace(go.Scatter(x=imm_pp_post.Date, y=imm_pp_post.Positive, mode='lines',name = "Positive",
+                                  stackgroup='one'),row=1,col=1)    
+    imm_2019.add_trace(go.Scatter(x=imm_pp_post.Date, y=imm_pp_post.Percentage_neg, fill='tozeroy', 
+                                  name="% Negative",fillcolor='rgba(255,0,0,0.4)', line_color='red'),  row=2, col=1)
 
     imm_2019.update_layout(showlegend=True,
            title=dict(
@@ -344,20 +352,30 @@ def generate_graphs(n):
     ####################################################################### Positive, negative, neutral tweets split by reaction type 
     ####################################################################################################################### 2015-2016
     imm_2015_reac = pd.read_csv('./data_postprocessed/imm_2015_2016_reactions_hor.csv')
-    
     #------------------------------- TOTAL REACTIONS
-    imm_2015_reactions = go.Figure()
+    
+    imm_2015_reactions = make_subplots(rows=2, cols=1, shared_xaxes=True, 
+                vertical_spacing=0.05, row_heights=[0.7,0.2])
+    
+    imm_2015_reactions.add_trace(go.Scatter(x=imm_2015_reac.Date, y=imm_2015_reac.Total_Neutral,
+                                            mode='lines', name = "Neutral",stackgroup='one'), row=1,col=1)
+    imm_2015_reactions.add_trace(go.Scatter(x=imm_2015_reac.Date, y=imm_2015_reac.Total_Negative,
+                                            mode='lines',name = "Negative",stackgroup='one'), row=1,col=1)
     imm_2015_reactions.add_trace(go.Scatter(x=imm_2015_reac.Date, y=imm_2015_reac.Total_Positive, 
-                                            mode='lines',name = "(+) reactions",stackgroup='one'))
-    imm_2015_reactions.add_trace(go.Scatter(x=imm_2015_reac.Date, y=imm_2015_reac.Total_Negative, 
-                                            mode='lines',name = "(-) reactions",stackgroup='one'))
-    imm_2015_reactions.add_trace(go.Scatter(x=imm_2015_reac.Date, y=imm_2015_reac.Total_Neutral, 
-                                            mode='lines', name = "(/) reactions",stackgroup='one'))
-    imm_2015_reactions.update_layout(yaxis_title="# of reactions",showlegend=True,
+                                            mode='lines',name = "Positive",stackgroup='one'), row=1,col=1)
+    imm_2015_reac_total = imm_2015_reac.Total_Neutral+imm_2015_reac.Total_Negative + imm_2015_reac.Total_Positive
+    imm_2015_reactions.add_trace(go.Scatter(x=imm_2015_reac.Date, y=100*imm_2015_reac.Total_Negative/imm_2015_reac_total, fill='tozeroy', 
+                                  name="% Negative",fillcolor='rgba(255,0,0,0.4)', line_color='red'),  row=2, col=1)
+    
+    imm_2015_reactions.update_layout(showlegend=True,
            title=dict(
-                text='Reactions to all tweets - Oct 2019 to Sep 2020',xanchor= "center",x=0.5,
+                text='Oct 2015 to Sep 2016',xanchor= "center",x=0.5,
                 font=dict(size=20,color='#000000')),
            legend=dict(orientation="h", yanchor="bottom",y=1.02,xanchor="right",x=1))
+
+    imm_2015_reactions.update_yaxes(title_text="# of reactions", row=1, col=1)
+    imm_2015_reactions.update_yaxes(title_text="% (-) tweets", row=2, col=1,range=[0, 100])
+    
     imm_2015_reactions.layout.font.family = 'Calibri'
     imm_2015_reactions.show()
     
@@ -367,8 +385,8 @@ def generate_graphs(n):
                                             mode='lines',name = "Likes",stackgroup='one'))
     imm_2015_pos_reactions.add_trace(go.Scatter(x=imm_2015_reac.Date, y=imm_2015_reac.Positive_nreplies, 
                                             mode='lines',name = "Replies",stackgroup='one'))
-    imm_2015_pos_reactions.add_trace(go.Scatter(x=imm_2015_reac.Date, y=imm_2015_reac.Positive_nretweets, 
-                                            mode='lines', name = "Retweets",stackgroup='one'))
+    imm_2015_pos_reactions.add_trace(go.Scatter(x=imm_2015_reac.Date, y=imm_2015_reac.Positive_nretweets,
+                                            mode='lines',name = "Retweets",stackgroup='one'))
     imm_2015_pos_reactions.update_layout(yaxis_title="# of reactions",showlegend=True,
            title=dict(
                 text='Reactions to (+) tweets - Oct 2015 to Sep 2016',xanchor= "center",x=0.5,
@@ -417,19 +435,27 @@ def generate_graphs(n):
     imm_2019_reac = pd.read_csv('./data_postprocessed/imm_2019_2020_reactions_hor.csv')
     
     #------------------------------- TOTAL REACTIONS
-    
-    imm_2019_reactions = go.Figure()
+    imm_2019_reactions = make_subplots(rows=2, cols=1, shared_xaxes=True, 
+                vertical_spacing=0.05, row_heights=[0.7,0.2])
+    imm_2019_reactions.add_trace(go.Scatter(x=imm_2019_reac.Date, y=imm_2019_reac.Total_Neutral,
+                                            mode='lines', name = "Neutral",stackgroup='one'), row=1,col=1)
+    imm_2019_reactions.add_trace(go.Scatter(x=imm_2019_reac.Date, y=imm_2019_reac.Total_Negative,
+                                            mode='lines',name = "Negative",stackgroup='one'), row=1,col=1)
     imm_2019_reactions.add_trace(go.Scatter(x=imm_2019_reac.Date, y=imm_2019_reac.Total_Positive, 
-                                            mode='lines',name = "(+) reactions",stackgroup='one'))
-    imm_2019_reactions.add_trace(go.Scatter(x=imm_2019_reac.Date, y=imm_2019_reac.Total_Negative, 
-                                            mode='lines',name = "(-) reactions",stackgroup='one'))
-    imm_2019_reactions.add_trace(go.Scatter(x=imm_2019_reac.Date, y=imm_2019_reac.Total_Neutral, 
-                                            mode='lines', name = "(/) reactions",stackgroup='one'))
-    imm_2019_reactions.update_layout(yaxis_title="# of reactions",showlegend=True,
+                                            mode='lines',name = "Positive",stackgroup='one'), row=1,col=1)
+    imm_2019_reac_total = imm_2019_reac.Total_Neutral+imm_2019_reac.Total_Negative + imm_2019_reac.Total_Positive
+    imm_2019_reactions.add_trace(go.Scatter(x=imm_2019_reac.Date, y=100*imm_2019_reac.Total_Negative/imm_2019_reac_total, fill='tozeroy', 
+                                  name="% Negative",fillcolor='rgba(255,0,0,0.4)', line_color='red'),  row=2, col=1)
+    
+    imm_2019_reactions.update_layout(showlegend=True,
            title=dict(
-                text='Reactions to all tweets - Oct 2019 to Sep 2020',xanchor= "center",x=0.5,
+                text='Oct 2019 to Sep 2020',xanchor= "center",x=0.5,
                 font=dict(size=20,color='#000000')),
            legend=dict(orientation="h", yanchor="bottom",y=1.02,xanchor="right",x=1))
+
+    imm_2019_reactions.update_yaxes(title_text="# of reactions", row=1, col=1)
+    imm_2019_reactions.update_yaxes(title_text="% (-) tweets", row=2, col=1,range=[0, 100])
+    
     imm_2019_reactions.layout.font.family = 'Calibri'
     imm_2019_reactions.show()
     
@@ -500,10 +526,14 @@ def generate_graphs(n):
     pol_2015 = make_subplots(rows=2, cols=1, shared_xaxes=True, 
                 vertical_spacing=0.05, row_heights=[0.7,0.2])
 
-    pol_2015.add_trace(go.Scatter(x=pol_pp_pre.Date, y=pol_pp_pre.Negative, mode='lines',name = "Negative",stackgroup='one'), row=1,col=1)
-    pol_2015.add_trace(go.Scatter(x=pol_pp_pre.Date, y=pol_pp_pre.Positive, mode='lines',name = "Positive",stackgroup='one'), row=1,col=1)
-    pol_2015.add_trace(go.Scatter(x=pol_pp_pre.Date, y=pol_pp_pre.Neutral, mode='lines', name = "Neutral",stackgroup='one'), row=1, col=1)
-    pol_2015.add_trace(go.Scatter(x=pol_pp_pre.Date, y=pol_pp_pre.Percentage_neg, fill='tozeroy', name="% Negative"),  row=2, col=1)
+    pol_2015.add_trace(go.Scatter(x=pol_pp_pre.Date, y=pol_pp_pre.Neutral, mode='lines', name = "Neutral",
+                                  stackgroup='one'), row=1, col=1)
+    pol_2015.add_trace(go.Scatter(x=pol_pp_pre.Date, y=pol_pp_pre.Negative, mode='lines',name = "Negative",
+                                  stackgroup='one'), row=1,col=1)
+    pol_2015.add_trace(go.Scatter(x=pol_pp_pre.Date, y=pol_pp_pre.Positive, mode='lines',name = "Positive",
+                                  stackgroup='one'), row=1,col=1)
+    pol_2015.add_trace(go.Scatter(x=pol_pp_pre.Date, y=pol_pp_pre.Percentage_neg, fill='tozeroy', 
+                                  fillcolor='rgba(255,0,0,0.4)', line_color='red',name="% Negative"),  row=2, col=1)
 
     pol_2015.update_layout(showlegend=True, 
            title=dict(
@@ -522,11 +552,14 @@ def generate_graphs(n):
     pol_2019 = make_subplots(rows=2, cols=1, shared_xaxes=True, 
                     vertical_spacing=0.05, row_heights=[0.7,0.2])
     
-    pol_2019.add_trace(go.Scatter(x=pol_pp_post.Date, y=pol_pp_post.Negative, mode='lines',name = "Negative",stackgroup='one'),row=1,col=1)
-    pol_2019.add_trace(go.Scatter(x=pol_pp_post.Date, y=pol_pp_post.Positive, mode='lines',name = "Positive",stackgroup='one'),row=1,col=1)
-    pol_2019.add_trace(go.Scatter(x=pol_pp_post.Date, y=pol_pp_post.Neutral, mode='lines', name = "Neutral",stackgroup='one'), row=1,col=1)
-    
-    pol_2019.add_trace(go.Scatter(x=pol_pp_post.Date, y=pol_pp_post.Percentage_neg, fill='tozeroy', name="% Negative"),  row=2, col=1)
+    pol_2019.add_trace(go.Scatter(x=pol_pp_post.Date, y=pol_pp_post.Neutral, mode='lines', name = "Neutral",
+                                  stackgroup='one'), row=1, col=1)
+    pol_2019.add_trace(go.Scatter(x=pol_pp_post.Date, y=pol_pp_post.Negative, mode='lines',name = "Negative",
+                                  stackgroup='one'), row=1,col=1)
+    pol_2019.add_trace(go.Scatter(x=pol_pp_post.Date, y=pol_pp_post.Positive, mode='lines',name = "Positive",
+                                  stackgroup='one'), row=1,col=1)
+    pol_2019.add_trace(go.Scatter(x=pol_pp_post.Date, y=pol_pp_post.Percentage_neg, fill='tozeroy', 
+                                  fillcolor='rgba(255,0,0,0.4)',line_color='red',name="% Negative"),  row=2, col=1)
 
     pol_2019.update_layout(showlegend=True,
            title=dict(
@@ -546,18 +579,26 @@ def generate_graphs(n):
     pol_2015_reac = pd.read_csv('./data_postprocessed/politics_2015_2016_reactions_hor.csv')
     
     #------------------------------- TOTAL REACTIONS
-    pol_2015_reactions = go.Figure()
+    pol_2015_reactions = make_subplots(rows=2, cols=1, shared_xaxes=True, 
+                    vertical_spacing=0.05, row_heights=[0.7,0.2])
+    pol_2015_reactions.add_trace(go.Scatter(x=pol_2015_reac.Date, y=pol_2015_reac.Total_Neutral,
+                                            mode='lines', name = "Neutral",stackgroup='one'), row=1,col=1)
+    pol_2015_reactions.add_trace(go.Scatter(x=pol_2015_reac.Date, y=pol_2015_reac.Total_Negative,
+                                            mode='lines',name = "Negative",stackgroup='one'), row=1,col=1)
     pol_2015_reactions.add_trace(go.Scatter(x=pol_2015_reac.Date, y=pol_2015_reac.Total_Positive, 
-                                            mode='lines',name = "(+) reactions",stackgroup='one'))
-    pol_2015_reactions.add_trace(go.Scatter(x=pol_2015_reac.Date, y=pol_2015_reac.Total_Negative, 
-                                            mode='lines',name = "(-) reactions",stackgroup='one'))
-    pol_2015_reactions.add_trace(go.Scatter(x=pol_2015_reac.Date, y=pol_2015_reac.Total_Neutral, 
-                                            mode='lines', name = "(/) reactions",stackgroup='one'))
-    pol_2015_reactions.update_layout(yaxis_title="# of reactions",showlegend=True,
+                                            mode='lines',name = "Positive",stackgroup='one'), row=1,col=1)
+    pol_2015_reac_total = pol_2015_reac.Total_Neutral+pol_2015_reac.Total_Negative + pol_2015_reac.Total_Positive
+    pol_2015_reactions.add_trace(go.Scatter(x=pol_2015_reac.Date, y=100*pol_2015_reac.Total_Negative/pol_2015_reac_total, fill='tozeroy', 
+                                  name="% Negative",fillcolor='rgba(255,0,0,0.4)', line_color='red'),  row=2, col=1)
+    
+    pol_2015_reactions.update_layout(showlegend=True,
            title=dict(
-                text='Reactions to all tweets - Oct 2015 to Sep 2016',xanchor= "center",x=0.5,
+                text='Oct 2015 to Sep 2016',xanchor= "center",x=0.5,
                 font=dict(size=20,color='#000000')),
            legend=dict(orientation="h", yanchor="bottom",y=1.02,xanchor="right",x=1))
+
+    pol_2015_reactions.update_yaxes(title_text="# of reactions", row=1, col=1)
+    pol_2015_reactions.update_yaxes(title_text="% (-) tweets", row=2, col=1,range=[0, 100])
     pol_2015_reactions.layout.font.family = 'Calibri'
     pol_2015_reactions.show()
     
@@ -616,18 +657,27 @@ def generate_graphs(n):
     
     pol_2019_reac = pd.read_csv('./data_postprocessed/politics_2019_2020_reactions_hor.csv')
     #------------------------------- TOTAL REACTIONS
-    pol_2019_reactions = go.Figure()
+    pol_2019_reactions = make_subplots(rows=2, cols=1, shared_xaxes=True, 
+                    vertical_spacing=0.05, row_heights=[0.7,0.2])
+    
+    pol_2019_reactions.add_trace(go.Scatter(x=pol_2019_reac.Date, y=pol_2019_reac.Total_Neutral,
+                                            mode='lines', name = "Neutral",stackgroup='one'), row=1,col=1)
+    pol_2019_reactions.add_trace(go.Scatter(x=pol_2019_reac.Date, y=pol_2019_reac.Total_Negative,
+                                            mode='lines',name = "Negative",stackgroup='one'), row=1,col=1)
     pol_2019_reactions.add_trace(go.Scatter(x=pol_2019_reac.Date, y=pol_2019_reac.Total_Positive, 
-                                            mode='lines',name = "(+) reactions",stackgroup='one'))
-    pol_2019_reactions.add_trace(go.Scatter(x=pol_2019_reac.Date, y=pol_2019_reac.Total_Negative, 
-                                            mode='lines',name = "(-) reactions",stackgroup='one'))
-    pol_2019_reactions.add_trace(go.Scatter(x=pol_2019_reac.Date, y=pol_2019_reac.Total_Neutral, 
-                                            mode='lines', name = "(/) reactions",stackgroup='one'))
-    pol_2019_reactions.update_layout(yaxis_title="# of reactions",showlegend=True,
+                                            mode='lines',name = "Positive",stackgroup='one'), row=1,col=1)
+    pol_2019_reac_total = pol_2019_reac.Total_Neutral+pol_2019_reac.Total_Negative + pol_2019_reac.Total_Positive
+    pol_2019_reactions.add_trace(go.Scatter(x=pol_2019_reac.Date, y=100*pol_2019_reac.Total_Negative/pol_2019_reac_total, fill='tozeroy', 
+                                  name="% Negative",fillcolor='rgba(255,0,0,0.4)', line_color='red'),  row=2, col=1)
+    
+    pol_2019_reactions.update_layout(showlegend=True,
            title=dict(
-                text='Reactions to all tweets - Oct 2019 to Sep 2020',xanchor= "center",x=0.5,
+                text='Oct 2019 to Sep 2020',xanchor= "center",x=0.5,
                 font=dict(size=20,color='#000000')),
            legend=dict(orientation="h", yanchor="bottom",y=1.02,xanchor="right",x=1))
+
+    pol_2019_reactions.update_yaxes(title_text="# of reactions", row=1, col=1)
+    pol_2019_reactions.update_yaxes(title_text="% (-) tweets", row=2, col=1,range=[0, 100])
     pol_2019_reactions.layout.font.family = 'Calibri'
     pol_2019_reactions.show()
     #------------------------------- POSITIVE
@@ -696,10 +746,14 @@ def generate_graphs(n):
     lgbt_2015 = make_subplots(rows=2, cols=1, shared_xaxes=True, 
                 vertical_spacing=0.05, row_heights=[0.7,0.2])
 
-    lgbt_2015.add_trace(go.Scatter(x=lgbt_pp_pre.Date, y=lgbt_pp_pre.Negative, mode='lines',name = "Negative",stackgroup='one'), row=1,col=1)
-    lgbt_2015.add_trace(go.Scatter(x=lgbt_pp_pre.Date, y=lgbt_pp_pre.Positive, mode='lines',name = "Positive",stackgroup='one'), row=1,col=1)
-    lgbt_2015.add_trace(go.Scatter(x=lgbt_pp_pre.Date, y=lgbt_pp_pre.Neutral, mode='lines', name = "Neutral",stackgroup='one'), row=1, col=1)
-    lgbt_2015.add_trace(go.Scatter(x=lgbt_pp_pre.Date, y=lgbt_pp_pre.Percentage_neg, fill='tozeroy', name="% Negative"),  row=2, col=1)
+    lgbt_2015.add_trace(go.Scatter(x=lgbt_pp_pre.Date, y=lgbt_pp_pre.Neutral, mode='lines', 
+                                   name = "Neutral",stackgroup='one'), row=1, col=1)
+    lgbt_2015.add_trace(go.Scatter(x=lgbt_pp_pre.Date, y=lgbt_pp_pre.Negative, mode='lines',
+                                   name = "Negative",stackgroup='one'), row=1,col=1)
+    lgbt_2015.add_trace(go.Scatter(x=lgbt_pp_pre.Date, y=lgbt_pp_pre.Positive, mode='lines',
+                                   name = "Positive",stackgroup='one'), row=1,col=1)
+    lgbt_2015.add_trace(go.Scatter(x=lgbt_pp_pre.Date, y=lgbt_pp_pre.Percentage_neg, 
+                                   fillcolor='rgba(255,0,0,0.4)', line_color='red',fill='tozeroy', name="% Negative"),  row=2, col=1)
 
     lgbt_2015.update_layout(showlegend=True, 
            title=dict(
@@ -719,13 +773,14 @@ def generate_graphs(n):
     lgbt_2019 = make_subplots(rows=2, cols=1, shared_xaxes=True, 
                     vertical_spacing=0.05, row_heights=[0.7,0.2])
     
-    lgbt_2019.add_trace(go.Scatter(x=lgbt_pp_post.Date, y=lgbt_pp_post.Negative,
-                                   mode='lines',name = "Negative",stackgroup='one'),row=1,col=1)
-    lgbt_2019.add_trace(go.Scatter(x=lgbt_pp_post.Date, y=lgbt_pp_post.Positive, 
-                                   mode='lines',name = "Positive",stackgroup='one'),row=1,col=1)
-    lgbt_2019.add_trace(go.Scatter(x=lgbt_pp_post.Date, y=lgbt_pp_post.Neutral, 
-                                   mode='lines', name = "Neutral",stackgroup='one'), row=1,col=1)
-    lgbt_2019.add_trace(go.Scatter(x=lgbt_pp_post.Date, y=lgbt_pp_post.Percentage_neg, fill='tozeroy', name="% Negative"),  row=2, col=1)
+    lgbt_2019.add_trace(go.Scatter(x=lgbt_pp_post.Date, y=lgbt_pp_post.Neutral, mode='lines', 
+                                   name = "Neutral",stackgroup='one'), row=1, col=1)
+    lgbt_2019.add_trace(go.Scatter(x=lgbt_pp_post.Date, y=lgbt_pp_post.Negative, mode='lines',
+                                   name = "Negative",stackgroup='one'), row=1,col=1)
+    lgbt_2019.add_trace(go.Scatter(x=lgbt_pp_post.Date, y=lgbt_pp_post.Positive, mode='lines',
+                                   name = "Positive",stackgroup='one'), row=1,col=1)
+    lgbt_2019.add_trace(go.Scatter(x=lgbt_pp_post.Date, y=lgbt_pp_post.Percentage_neg, 
+                                   fillcolor='rgba(255,0,0,0.4)', line_color='red',fill='tozeroy', name="% Negative"),  row=2, col=1)
 
     lgbt_2019.update_layout(showlegend=True,
            title=dict(
@@ -745,18 +800,28 @@ def generate_graphs(n):
     lgbt_2015_reac = pd.read_csv('./data_postprocessed/lgbtq_2015_2016_reactions_hor.csv')
     
     #------------------------------- TOTAL REACTIONS
-    lgbt_2015_reactions = go.Figure()
+    
+    lgbt_2015_reactions = make_subplots(rows=2, cols=1, shared_xaxes=True, 
+                    vertical_spacing=0.05, row_heights=[0.7,0.2])
+    lgbt_2015_reactions.add_trace(go.Scatter(x=lgbt_2015_reac.Date, y=lgbt_2015_reac.Total_Neutral,
+                                            mode='lines', name = "Neutral",stackgroup='one'), row=1,col=1)
+    lgbt_2015_reactions.add_trace(go.Scatter(x=lgbt_2015_reac.Date, y=lgbt_2015_reac.Total_Negative,
+                                            mode='lines',name = "Negative",stackgroup='one'), row=1,col=1)
     lgbt_2015_reactions.add_trace(go.Scatter(x=lgbt_2015_reac.Date, y=lgbt_2015_reac.Total_Positive, 
-                                            mode='lines',name = "(+) reactions",stackgroup='one'))
-    lgbt_2015_reactions.add_trace(go.Scatter(x=lgbt_2015_reac.Date, y=lgbt_2015_reac.Total_Negative, 
-                                            mode='lines',name = "(-) reactions",stackgroup='one'))
-    lgbt_2015_reactions.add_trace(go.Scatter(x=lgbt_2015_reac.Date, y=lgbt_2015_reac.Total_Neutral, 
-                                            mode='lines', name = "(/) reactions",stackgroup='one'))
-    lgbt_2015_reactions.update_layout(yaxis_title="# of reactions",showlegend=True,
+                                            mode='lines',name = "Positive",stackgroup='one'), row=1,col=1)
+    lgbt_2015_reac_total = lgbt_2015_reac.Total_Neutral+lgbt_2015_reac.Total_Negative + lgbt_2015_reac.Total_Positive
+    lgbt_2015_reactions.add_trace(go.Scatter(x=lgbt_2015_reac.Date, y=100*lgbt_2015_reac.Total_Negative/lgbt_2015_reac_total,
+                                             fill='tozeroy',name="% Negative",
+                                             fillcolor='rgba(255,0,0,0.4)', line_color='red'),  row=2, col=1)
+    
+    lgbt_2015_reactions.update_layout(showlegend=True,
            title=dict(
-                text='Reactions to all tweets - Oct 2015 to Sep 2016',xanchor= "center",x=0.5,
+                text='Oct 2015 to Sep 2016',xanchor= "center",x=0.5,
                 font=dict(size=20,color='#000000')),
            legend=dict(orientation="h", yanchor="bottom",y=1.02,xanchor="right",x=1))
+
+    lgbt_2015_reactions.update_yaxes(title_text="# of reactions", row=1, col=1)
+    lgbt_2015_reactions.update_yaxes(title_text="% (-) tweets", row=2, col=1,range=[0, 100])
     lgbt_2015_reactions.layout.font.family = 'Calibri'
     lgbt_2015_reactions.show()
     
@@ -815,18 +880,27 @@ def generate_graphs(n):
     
     lgbt_2019_reac = pd.read_csv('./data_postprocessed/lgbtq_2019_2020_reactions_hor.csv')
     #------------------------------- TOTAL REACTIONS
-    lgbt_2019_reactions = go.Figure()
+    lgbt_2019_reactions = make_subplots(rows=2, cols=1, shared_xaxes=True, 
+                    vertical_spacing=0.05, row_heights=[0.7,0.2])
+    lgbt_2019_reactions.add_trace(go.Scatter(x=lgbt_2019_reac.Date, y=lgbt_2019_reac.Total_Neutral,
+                                            mode='lines', name = "Neutral",stackgroup='one'), row=1,col=1)
+    lgbt_2019_reactions.add_trace(go.Scatter(x=lgbt_2019_reac.Date, y=lgbt_2019_reac.Total_Negative,
+                                            mode='lines',name = "Negative",stackgroup='one'), row=1,col=1)
     lgbt_2019_reactions.add_trace(go.Scatter(x=lgbt_2019_reac.Date, y=lgbt_2019_reac.Total_Positive, 
-                                            mode='lines',name = "(+) reactions",stackgroup='one'))
-    lgbt_2019_reactions.add_trace(go.Scatter(x=lgbt_2019_reac.Date, y=lgbt_2019_reac.Total_Negative, 
-                                            mode='lines',name = "(-) reactions",stackgroup='one'))
-    lgbt_2019_reactions.add_trace(go.Scatter(x=lgbt_2019_reac.Date, y=lgbt_2019_reac.Total_Neutral, 
-                                            mode='lines', name = "(/) reactions",stackgroup='one'))
-    lgbt_2019_reactions.update_layout(yaxis_title="# of reactions",showlegend=True,
+                                            mode='lines',name = "Positive",stackgroup='one'), row=1,col=1)
+    lgbt_2019_reac_total = lgbt_2019_reac.Total_Neutral+lgbt_2019_reac.Total_Negative + lgbt_2019_reac.Total_Positive
+    lgbt_2019_reactions.add_trace(go.Scatter(x=lgbt_2019_reac.Date, y=100*lgbt_2019_reac.Total_Negative/lgbt_2019_reac_total,
+                                             fill='tozeroy',name="% Negative",
+                                             fillcolor='rgba(255,0,0,0.4)', line_color='red'),  row=2, col=1)
+    
+    lgbt_2019_reactions.update_layout(showlegend=True,
            title=dict(
-                text='Reactions to all tweets - Oct 2019 to Sep 2020',xanchor= "center",x=0.5,
+                text='Oct 2019 to Sep 2020',xanchor= "center",x=0.5,
                 font=dict(size=20,color='#000000')),
            legend=dict(orientation="h", yanchor="bottom",y=1.02,xanchor="right",x=1))
+
+    lgbt_2019_reactions.update_yaxes(title_text="# of reactions", row=1, col=1)
+    lgbt_2019_reactions.update_yaxes(title_text="% (-) tweets", row=2, col=1,range=[0, 100])
     lgbt_2019_reactions.layout.font.family = 'Calibri'
     lgbt_2019_reactions.show()
     #------------------------------- POSITIVE
@@ -896,10 +970,14 @@ def generate_graphs(n):
     env_2015 = make_subplots(rows=2, cols=1, shared_xaxes=True, 
                 vertical_spacing=0.05, row_heights=[0.7,0.2])
 
-    env_2015.add_trace(go.Scatter(x=env_pp_pre.Date, y=env_pp_pre.Negative, mode='lines',name = "Negative",stackgroup='one'), row=1,col=1)
-    env_2015.add_trace(go.Scatter(x=env_pp_pre.Date, y=env_pp_pre.Positive, mode='lines',name = "Positive",stackgroup='one'), row=1,col=1)
-    env_2015.add_trace(go.Scatter(x=env_pp_pre.Date, y=env_pp_pre.Neutral, mode='lines', name = "Neutral",stackgroup='one'), row=1, col=1)
-    env_2015.add_trace(go.Scatter(x=env_pp_pre.Date, y=env_pp_pre.Percentage_neg, fill='tozeroy', name="% Negative"),  row=2, col=1)
+    env_2015.add_trace(go.Scatter(x=env_pp_pre.Date, y=env_pp_pre.Neutral, mode='lines', 
+                                  name = "Neutral",stackgroup='one'), row=1, col=1)
+    env_2015.add_trace(go.Scatter(x=env_pp_pre.Date, y=env_pp_pre.Negative, mode='lines',
+                                  name = "Negative",stackgroup='one'), row=1,col=1)
+    env_2015.add_trace(go.Scatter(x=env_pp_pre.Date, y=env_pp_pre.Positive, mode='lines',
+                                  name = "Positive",stackgroup='one'), row=1,col=1)
+    env_2015.add_trace(go.Scatter(x=env_pp_pre.Date, y=env_pp_pre.Percentage_neg, fill='tozeroy',
+                                  fillcolor='rgba(255,0,0,0.4)', line_color='red',name="% Negative"),  row=2, col=1)
 
     env_2015.update_layout(showlegend=True, 
            title=dict(
@@ -919,10 +997,14 @@ def generate_graphs(n):
     env_2019 = make_subplots(rows=2, cols=1, shared_xaxes=True, 
                     vertical_spacing=0.05, row_heights=[0.7,0.2])
     
-    env_2019.add_trace(go.Scatter(x=env_pp_post.Date, y=env_pp_post.Negative, mode='lines',name ="Negative",stackgroup='one'),row=1,col=1)
-    env_2019.add_trace(go.Scatter(x=env_pp_post.Date, y=env_pp_post.Positive, mode='lines',name ="Positive",stackgroup='one'),row=1,col=1)
-    env_2019.add_trace(go.Scatter(x=env_pp_post.Date, y=env_pp_post.Neutral, mode='lines', name = "Neutral",stackgroup='one'),row=1,col=1) 
-    env_2019.add_trace(go.Scatter(x=env_pp_post.Date, y=env_pp_post.Percentage_neg, fill='tozeroy', name="% Negative"),  row=2, col=1)
+    env_2019.add_trace(go.Scatter(x=env_pp_post.Date, y=env_pp_post.Neutral, mode='lines', 
+                                  name = "Neutral",stackgroup='one'), row=1, col=1)
+    env_2019.add_trace(go.Scatter(x=env_pp_post.Date, y=env_pp_post.Negative, mode='lines',
+                                  name = "Negative",stackgroup='one'), row=1,col=1)
+    env_2019.add_trace(go.Scatter(x=env_pp_post.Date, y=env_pp_post.Positive, mode='lines',
+                                  name = "Positive",stackgroup='one'), row=1,col=1)
+    env_2019.add_trace(go.Scatter(x=env_pp_post.Date, y=env_pp_post.Percentage_neg, fill='tozeroy',
+                                  fillcolor='rgba(255,0,0,0.4)', line_color='red',name="% Negative"),  row=2, col=1)
 
     env_2019.update_layout(showlegend=True,
            title=dict(
@@ -942,18 +1024,27 @@ def generate_graphs(n):
     env_2015_reac = pd.read_csv('./data_postprocessed/env_2015_2016_reactions_hor.csv')
     
     #------------------------------- TOTAL REACTIONS
-    env_2015_reactions = go.Figure()
-    env_2015_reactions.add_trace(go.Scatter(x=env_2015_reac.Date, y=env_2015_reac.Total_Positive,
-                                            mode='lines',name = "(+) reactions",stackgroup='one'))
-    env_2015_reactions.add_trace(go.Scatter(x=env_2015_reac.Date, y=env_2015_reac.Total_Negative, 
-                                            mode='lines',name = "(-) reactions",stackgroup='one'))
-    env_2015_reactions.add_trace(go.Scatter(x=env_2015_reac.Date, y=env_2015_reac.Total_Neutral, 
-                                            mode='lines', name = "(/) reactions",stackgroup='one'))
-    env_2015_reactions.update_layout(yaxis_title="# of reactions",showlegend=True,
+    env_2015_reactions = make_subplots(rows=2, cols=1, shared_xaxes=True, 
+                    vertical_spacing=0.05, row_heights=[0.7,0.2])
+    env_2015_reactions.add_trace(go.Scatter(x=env_2015_reac.Date, y=env_2015_reac.Total_Neutral,
+                                            mode='lines', name = "Neutral",stackgroup='one'), row=1,col=1)
+    env_2015_reactions.add_trace(go.Scatter(x=env_2015_reac.Date, y=env_2015_reac.Total_Negative,
+                                            mode='lines',name = "Negative",stackgroup='one'), row=1,col=1)
+    env_2015_reactions.add_trace(go.Scatter(x=env_2015_reac.Date, y=env_2015_reac.Total_Positive, 
+                                            mode='lines',name = "Positive",stackgroup='one'), row=1,col=1)
+    env_2015_reac_total = env_2015_reac.Total_Neutral+env_2015_reac.Total_Negative + env_2015_reac.Total_Positive
+    env_2015_reactions.add_trace(go.Scatter(x=env_2015_reac.Date, y=100*env_2015_reac.Total_Negative/env_2015_reac_total,
+                                             fill='tozeroy',name="% Negative",
+                                             fillcolor='rgba(255,0,0,0.4)', line_color='red'),  row=2, col=1)
+    
+    env_2015_reactions.update_layout(showlegend=True,
            title=dict(
-                text='Reactions to all tweets - Oct 2019 to Sep 2020',xanchor= "center",x=0.5,
+                text='Oct 2015 to Sep 2016',xanchor= "center",x=0.5,
                 font=dict(size=20,color='#000000')),
            legend=dict(orientation="h", yanchor="bottom",y=1.02,xanchor="right",x=1))
+
+    env_2015_reactions.update_yaxes(title_text="# of reactions", row=1, col=1)
+    env_2015_reactions.update_yaxes(title_text="% (-) tweets", row=2, col=1,range=[0, 100])
     env_2015_reactions.layout.font.family = 'Calibri'
     env_2015_reactions.show()
     
@@ -1013,19 +1104,27 @@ def generate_graphs(n):
     env_2019_reac = pd.read_csv('./data_postprocessed/env_2019_2020_reactions_hor.csv')
     
     #------------------------------- TOTAL REACTIONS
-    
-    env_2019_reactions = go.Figure()
+    env_2019_reactions = make_subplots(rows=2, cols=1, shared_xaxes=True, 
+                    vertical_spacing=0.05, row_heights=[0.7,0.2])
+    env_2019_reactions.add_trace(go.Scatter(x=env_2019_reac.Date, y=env_2019_reac.Total_Neutral,
+                                            mode='lines', name = "Neutral",stackgroup='one'), row=1,col=1)
+    env_2019_reactions.add_trace(go.Scatter(x=env_2019_reac.Date, y=env_2019_reac.Total_Negative,
+                                            mode='lines',name = "Negative",stackgroup='one'), row=1,col=1)
     env_2019_reactions.add_trace(go.Scatter(x=env_2019_reac.Date, y=env_2019_reac.Total_Positive, 
-                                            mode='lines',name = "(+) reactions",stackgroup='one'))
-    env_2019_reactions.add_trace(go.Scatter(x=env_2019_reac.Date, y=env_2019_reac.Total_Negative, 
-                                            mode='lines',name = "(-) reactions",stackgroup='one'))
-    env_2019_reactions.add_trace(go.Scatter(x=env_2019_reac.Date, y=env_2019_reac.Total_Neutral, 
-                                            mode='lines', name = "(/) reactions",stackgroup='one'))
-    env_2019_reactions.update_layout(yaxis_title="# of reactions",showlegend=True,
+                                            mode='lines',name = "Positive",stackgroup='one'), row=1,col=1)
+    env_2019_reac_total = env_2019_reac.Total_Neutral+env_2019_reac.Total_Negative + env_2019_reac.Total_Positive
+    env_2019_reactions.add_trace(go.Scatter(x=env_2019_reac.Date, y=100*env_2019_reac.Total_Negative/env_2019_reac_total,
+                                             fill='tozeroy',name="% Negative",
+                                             fillcolor='rgba(255,0,0,0.4)', line_color='red'),  row=2, col=1)
+    
+    env_2019_reactions.update_layout(showlegend=True,
            title=dict(
-                text='Reactions to all tweets - Oct 2019 to Sep 2020',xanchor= "center",x=0.5,
+                text='Oct 2019 to Sep 2020',xanchor= "center",x=0.5,
                 font=dict(size=20,color='#000000')),
            legend=dict(orientation="h", yanchor="bottom",y=1.02,xanchor="right",x=1))
+
+    env_2019_reactions.update_yaxes(title_text="# of reactions", row=1, col=1)
+    env_2019_reactions.update_yaxes(title_text="% (-) tweets", row=2, col=1,range=[0, 100])
     env_2019_reactions.layout.font.family = 'Calibri'
     env_2019_reactions.show()
     

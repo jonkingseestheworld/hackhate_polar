@@ -1,0 +1,3 @@
+[submodule "project-polar"]
+	path = project-polar
+	url = https://git.heroku.com/project-polar.git
